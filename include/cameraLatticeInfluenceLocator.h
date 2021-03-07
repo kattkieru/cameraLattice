@@ -32,10 +32,12 @@ public:
     
     virtual MStatus   		compute( const MPlug& plug, MDataBlock& data );
     
+#if MAYA_API_VERSION < 201900 // obsolete for Maya 2019 version and higher
 	virtual void            draw( M3dView & view, const MDagPath & path,
                                  M3dView::DisplayStyle style,
                                  M3dView::DisplayStatus status );
-    
+#endif
+
 	virtual bool            isBounded() const;
 	virtual MBoundingBox    boundingBox() const;
     
