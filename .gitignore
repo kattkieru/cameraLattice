@@ -11,3 +11,7 @@ build/
 .cproject
 *.exe
 *.msi
+cmake-build-*
+.idea
+plug-ins
+

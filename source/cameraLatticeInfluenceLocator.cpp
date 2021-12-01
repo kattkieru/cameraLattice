@@ -46,7 +46,6 @@ void CameraLatticeInfluenceLocator::drawCircle(const int axis, const double radi
     glEnd();
 }
 
-#if MAYA_API_VERSION < 201900 // obsolete for Maya 2019 version and higher
 // called by legacy default viewport
 void CameraLatticeInfluenceLocator::draw( M3dView & view, const MDagPath &path,
                      M3dView::DisplayStyle style,
@@ -88,7 +87,6 @@ void CameraLatticeInfluenceLocator::draw( M3dView & view, const MDagPath &path,
     
 	view.endGL();
 }
-#endif
 
 bool CameraLatticeInfluenceLocator::isBounded() const
 {

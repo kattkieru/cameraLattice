@@ -413,8 +413,10 @@ def _create_separator(vertical=False):
 
 
 def _get_icons_path():
-    tokens = __file__.split(os.path.sep)
-    return os.path.sep.join(tokens[:-1] + ['icons']) + os.path.sep
+    # tokens = __file__.split(os.path.sep)
+    # return os.path.sep.join(tokens[:-1] + ['icons']) + os.path.sep
+    folder = os.path.dirname(__file__)
+    return os.path.sep.join([folder, "icons"]) + os.path.sep
 
 
 class LineWidget(QtWidgets.QWidget):
